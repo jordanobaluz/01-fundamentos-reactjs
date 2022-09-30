@@ -12,6 +12,12 @@
     --green-500: #00875f;
 }
 
+/*modifica o focus ou seja quando selecionado a caixa de comentário deixa com as bordas verdes*/
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--green-300);
+}
+
 * {
     margin: 0;
     padding: 0;
