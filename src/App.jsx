@@ -15,7 +15,6 @@ function App() {
           <Post />
           <Post />
           <Post />
-          Componente Main
         </main>
       </div>
     </div>
