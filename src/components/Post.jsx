@@ -23,6 +23,10 @@ export function Post({ author, publishedAt, content }) {
         }
     )
 
+    function handleNewCommentInvalid() {
+        event.target.setCustomValidity('Esse campo é obrigatório!')
+    }
+
     function handleCreateNewComment() {
         event.preventDefault()
         setComments([...comments, newCommentText])
@@ -30,6 +34,8 @@ export function Post({ author, publishedAt, content }) {
     }
 
     function handleNewCommentChange() {
+        //DICA - necessário realizar esse procedimento, para não ficar aparecendo mensagem de campo obrigatório, mesmo após digitar algo
+        event.target.setCustomValidity('')
         setNewCommentText(event.target.value)
     }
 
@@ -41,6 +47,8 @@ export function Post({ author, publishedAt, content }) {
         })
         setComments(commentsWithoutDeletedOne)
     }
+
+    const isNewCommentEmpty = newCommentText.length === 0
 
     return (
         <article className={styles.post}>
@@ -77,9 +85,15 @@ export function Post({ author, publishedAt, content }) {
                     placeholder='Deixe um comentário'
                     value={newCommentText}
                     onChange={handleNewCommentChange}
+                    //DICA - uma propriedade quando é True, não precisa ser informada
+                    required
+                    onInvalid={handleNewCommentInvalid}
                 />
                 <footer>
-                    <button type='submit'>Publicar</button>
+                    <button
+                        type='submit'
+                        disabled={isNewCommentEmpty}
+                    >Publicar</button>
                 </footer>
             </form>
             <div className={styles.commentList}>
