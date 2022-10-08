@@ -33,6 +33,11 @@ export function Post({ author, publishedAt, content }) {
         setNewCommentText(event.target.value)
     }
 
+    //DICA - passar funções via propriedade do componente permite a manipulação dele
+    function deleteComment(comment) {
+        console.log(`deletar comentario ${comment}`)
+    }
+
     return (
         <article className={styles.post}>
             <header>
@@ -77,7 +82,11 @@ export function Post({ author, publishedAt, content }) {
                 {/*DICA - não usar o index na key, pois ao mudar o conteudo de posição o index permanece o mesmo*/}
                 {comments.map(comment => {
                     return (
-                        <Comment key={comment} content={comment} />
+                        <Comment
+                            key={comment}
+                            content={comment}
+                            onDeleteComment={deleteComment}
+                        />
                     )
                 })}
             </div>
