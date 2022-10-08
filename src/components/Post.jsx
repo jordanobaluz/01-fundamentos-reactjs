@@ -34,8 +34,12 @@ export function Post({ author, publishedAt, content }) {
     }
 
     //DICA - passar funções via propriedade do componente permite a manipulação dele
-    function deleteComment(comment) {
-        console.log(`deletar comentario ${comment}`)
+    function deleteComment(commentToDelete) {
+        //DICA - na imutabilidade as variaveis não sofrem mutação, nunca se altera uma variável na memoria
+        const commentsWithoutDeletedOne = comments.filter(comment => {
+            return comment !== commentToDelete
+        })
+        setComments(commentsWithoutDeletedOne)
     }
 
     return (
