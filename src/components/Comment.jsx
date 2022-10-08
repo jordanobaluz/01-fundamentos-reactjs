@@ -9,9 +9,11 @@ export function Comment({ content, onDeleteComment }) {
     function handleDeleteComment() {
         onDeleteComment(content)
     }
-
+    //DICA - sempre que atualizar uma informação que depende de um valor proprios anterior, utilizar o padrão abaixo
     function handleLikeComment() {
-        setLikeCount(likeCount + 1)
+        setLikeCount((state) => {
+            return state + 1
+        })
     }
 
     return (
