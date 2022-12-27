@@ -1,3 +1,5 @@
+![](https://giphy.com/gifs/D4yhZWjglB8ms51BSQ)
+
 # Ignite Feed
 
 Este é um projeto clone de rede social desenvolvido com React JS, CSS e outras tecnologias. O projeto permite que os usuários façam publicações e respondam às publicações, além de darem like nos comentários.
