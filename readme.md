@@ -15,6 +15,13 @@ Este é um projeto clone de rede social desenvolvido com React JS, CSS e outras 
 - [date-fns/locale/pt-BR](https://date-fns.org/v2.16.1/docs/I18n) - pacote de idioma português do Brasil para date-fns
 - [ESLint](https://eslint.org/) - linter para JavaScript que ajuda a manter um padrão de código consistente e a identificar problemas de estilo e possíveis erros
 
+## Técnicas utilizadas
+
+- Estilização com CSS Modules: utilizamos o CSS Modules para isolar o estilo dos componentes e evitar conflitos de nomes.
+- Propriedades e Estado: os componentes foram desenvolvidos seguindo o padrão de projeto de componentes do React, utilizando propriedades (props) para receber dados do componente pai e estado (state) para armazenar informações que podem ser alteradas pelo próprio componente.
+- Validação de formulários com atributos HTML: utilizamos os atributos `required`, `pattern` e `onInvalid` para validar os formulários do projeto.
+- Listas: foi utilizado o método map para percorrer os itens de uma lista e gerar elementos HTML de acordo com o conteúdo de cada item. Isso foi utilizado tanto para exibir os comentários quanto para exibir o conteúdo do post.
+
 ## Instalação e uso
 
 1. Clone este repositório para a sua máquina
