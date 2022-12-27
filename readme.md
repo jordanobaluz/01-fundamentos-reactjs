@@ -1,4 +1,4 @@
-![](https://giphy.com/gifs/D4yhZWjglB8ms51BSQ)
+![](https://media2.giphy.com/media/D4yhZWjglB8ms51BSQ/giphy.gif)
 
 # Ignite Feed
 
@@ -22,6 +22,6 @@ Este é um projeto clone de rede social desenvolvido com React JS, CSS e outras 
    ```bash
    npm install
 3. Inicie o projeto:
-```bash
-npm run dev
+    ```bash
+    npm run dev
 4. O projeto será aberto automaticamente em seu navegador padrão. Qualquer alteração que você fizer no código será refletida automaticamente na página aberta.
