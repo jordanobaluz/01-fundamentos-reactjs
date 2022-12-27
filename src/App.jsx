@@ -5,6 +5,7 @@ import { Post } from './components/Post'
 import './global.css'
 import styles from './App.module.css'
 
+// array de objetos para representar publicações de uma rede social
 const posts = [
   {
     id: 1,
@@ -81,9 +82,12 @@ const posts = [
 function App() {
   return (
     <div>
+      {/* renderiza a imagem e logo ignite feed */}
       <Header />
       <div className={styles.wrapper}>
+      {/* renderiza uma barra lateral para exibir perfil */}
         <Sidebar />
+        {/* renderiza lista de publicações, para cada iteração renderiza o componente post */}
         <main>
           {posts.map(post => {
             return (

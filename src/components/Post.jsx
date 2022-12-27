@@ -52,6 +52,7 @@ export function Post({ author, publishedAt, content }) {
 
     return (
         <article className={styles.post}>
+            {/* renderiza o perfil do autor, com data de publicaç~~ao */}
             <header>
                 <div className={styles.author}>
                     <Avatar src={author.avatarUrl} />
@@ -67,6 +68,7 @@ export function Post({ author, publishedAt, content }) {
                     {publishedDateRelativeToNow}
                 </time>
             </header>
+            {/* exibe o conteúdo da publicação, renderizando os comentários */}
             <div className={styles.content}>
                 {content.map(line => {
                     if (line.type === 'paragraph') {
@@ -77,7 +79,7 @@ export function Post({ author, publishedAt, content }) {
                     }
                 })}
             </div>
-
+            {/* adiciona um novo comentário */}
             <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
                 <textarea
@@ -96,6 +98,7 @@ export function Post({ author, publishedAt, content }) {
                     >Publicar</button>
                 </footer>
             </form>
+            {/* renderiza os comentários */}
             <div className={styles.commentList}>
                 {/*DICA - não usar o index na key, pois ao mudar o conteudo de posição o index permanece o mesmo*/}
                 {comments.map(comment => {
